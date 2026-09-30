@@ -12,7 +12,7 @@ public static class NumberSum
     public static long SumTo(long n)
     {
         long sum = 0;
-        for (long i = 1; i < n; i++)
+        for (long i = 1; i <= n; i++)
             sum += i;
         return sum;
     }
