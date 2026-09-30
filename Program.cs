@@ -12,6 +12,7 @@ public static class Program
             Console.WriteLine("=== Basic. Ketma-ketlik: 2-amaliy vazifa ===");
             Console.WriteLine("1. Kalkulyator");
             Console.WriteLine("2. 1 dan N gacha sonlar yig'indisi");
+            Console.WriteLine("3. Paritet tekshiruvi (juft / toq)");
             Console.WriteLine("0. Chiqish");
             Console.Write("Tanlang: ");
 
@@ -21,6 +22,7 @@ public static class Program
             {
                 case "1": Calculator.Run(); break;
                 case "2": NumberSum.Run(); break;
+                case "3": ParityChecker.Run(); break;
                 case "0": return;
                 default: Console.WriteLine("Noto'g'ri tanlov."); break;
             }

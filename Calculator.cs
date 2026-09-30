@@ -25,6 +25,8 @@ public static class Calculator
     {
         '+' => a + b,
         '-' => a - b,
+        '*' => a * b,
+        '/' => b == 0 ? throw new DivideByZeroException() : a / b,
         _ => throw new ArgumentException($"Noma'lum operatsiya: {op}")
     };
 
@@ -32,11 +34,11 @@ public static class Calculator
     {
         while (true)
         {
-            Console.Write("Operatsiyani kiriting (+, -): ");
+            Console.Write("Operatsiyani kiriting (+, -, *, /): ");
             string? text = Console.ReadLine()?.Trim();
-            if (text is { Length: 1 } && "+-".Contains(text[0]))
+            if (text is { Length: 1 } && "+-*/".Contains(text[0]))
                 return text[0];
-            Console.WriteLine("Faqat + yoki - kiriting.");
+            Console.WriteLine("Faqat +, -, * yoki / kiriting.");
         }
     }
 }
