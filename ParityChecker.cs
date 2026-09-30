@@ -9,5 +9,5 @@ public static class ParityChecker
         Console.WriteLine(Check(number));
     }
 
-    public static string Check(long number) => number % 2 == 0 ? "Toq" : "Juft";
+    public static string Check(long number) => number % 2 == 0 ? "Juft" : "Toq";
 }
